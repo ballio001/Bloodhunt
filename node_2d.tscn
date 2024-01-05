@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://p72o0n7u0sbm"]
+
+[ext_resource type="Script" path="res://IconExample.cs" id="1_1w7ho"]
+[ext_resource type="Texture2D" uid="uid://cg5iigt4u08cp" path="res://icon.svg" id="1_bslcr"]
+
+[sub_resource type="CSharpScript" id="CSharpScript_13lnk"]
+script/source = "using Godot;
+using System;
+
+public partial class Icon : Sprite2D
+{
+	// Called when the node enters the scene tree for the first time.
+	public override void _Ready()
+	{
+		int i = 46;
+	}
+
+	// Called every frame. 'delta' is the elapsed time since the previous frame.
+	public override void _Process(double delta)
+	{
+	}
+}
+"
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_1w7ho")
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(183, 203)
+texture = ExtResource("1_bslcr")
+script = SubResource("CSharpScript_13lnk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
