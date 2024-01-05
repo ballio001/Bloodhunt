@@ -7,6 +7,7 @@ public partial class IconExample : Node2D
 	public override void _Ready()
 	{
 		int i = 45;
+		string test = "test";
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
